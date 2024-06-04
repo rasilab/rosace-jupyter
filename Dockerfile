@@ -46,4 +46,4 @@ ENV CMDSTAN="/opt/cmdstan/cmdstan-2.34.1"
 RUN /opt/conda/envs/R/bin/R -s -e "Sys.setenv(CMDSTAN='/opt/cmdstan/cmdstan-2.34.1'); library(cmdstanr); cmdstanr::set_cmdstan_path(Sys.getenv('CMDSTAN')); print(cmdstanr::cmdstan_path()); print(cmdstanr::cmdstan_version())"
 
 # Install the release version of rosace
-RUN /opt/conda/envs/R/bin/R -s -e "Sys.setenv(CMDSTAN='/opt/cmdstan/cmdstan-2.34.1'); remotes::install_github('pimentellab/rosace@0d469506a02057f6402d6a0b9d075cd5eaa1a177')"
+RUN /opt/conda/envs/R/bin/R -s -e "Sys.setenv(CMDSTAN='/opt/cmdstan/cmdstan-2.34.1'); remotes::install_github('pimentellab/rosace@a6a95a671818f05ff3a2c0fea800fe370bdae565')"
